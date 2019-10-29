@@ -79,7 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     //something goes wrong : all fields must be filled
                     //we need to display an error message
-                    showMessage("Please Verify all fields BoSS!") ;
+                    showMessage("No no no. Please Verify all fields") ;
                     regBtn.setVisibility(View.VISIBLE);
                     loadingProgress.setVisibility(View.INVISIBLE);
 
@@ -136,7 +136,7 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful()){
 
                             //user account created successfully
-                            showMessage("Account created successfully saa unaeza tulia!");
+                            showMessage("Account created successfully, good stuff");
                             //after we created User account we need to update his profile picture and name
 
 
@@ -152,7 +152,7 @@ public class RegisterActivity extends AppCompatActivity {
                         else {
 
                             //account creation failed
-                            showMessage("Account creation failed...Try tena Bro !!" + task.getException().getMessage());
+                            showMessage("Account creation failed...Try again" + task.getException().getMessage());
                             regBtn.setVisibility(View.VISIBLE);
                             loadingProgress.setVisibility(View.INVISIBLE);
 
@@ -200,7 +200,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                                         if (task.isSuccessful()){
                                             // user info
-                                            showMessage("Register Complete");
+                                            showMessage("Registration Complete");
                                             updateUI();
                                         }
 
@@ -239,7 +239,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                         if (task.isSuccessful()){
                             // user info
-                            showMessage("Register Complete");
+                            showMessage("Registration Complete");
                             updateUI();
                         }
 
@@ -282,7 +282,7 @@ public class RegisterActivity extends AppCompatActivity {
                 != PackageManager.PERMISSION_GRANTED){
             if (ActivityCompat.shouldShowRequestPermissionRationale(RegisterActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)){
 
-                Toast.makeText(RegisterActivity.this,"Please accept for required permission", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this,"Please accept permission", Toast.LENGTH_SHORT).show();
 
             }
 

@@ -66,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
                 final String password = userPassword.getText().toString();
 
                 if (mail.isEmpty() || password.isEmpty()){
-                    showMessage("Please Bro Verify All Field");
+                    showMessage("No no no all fields must be filled");
                     btnLogin.setVisibility(View.VISIBLE);
                     loginProgress.setVisibility(View.INVISIBLE);
                 }

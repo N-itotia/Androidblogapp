@@ -101,7 +101,7 @@ public class PostDetailActivity extends AppCompatActivity {
                 commentReference.setValue(comment).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        showMessage("comment added");
+                        showMessage("done;)");
                         editTextComment.setText("");
                         btnAddComment.setVisibility(View.VISIBLE);
                     }

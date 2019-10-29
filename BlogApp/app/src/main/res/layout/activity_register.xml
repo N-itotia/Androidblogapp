@@ -20,8 +20,10 @@
         android:src="@drawable/userphoto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -31,8 +33,6 @@
         app:layout_constraintGuide_begin="378dp" />
 
     <EditText
-        android:background="@drawable/reg_edittext_style"
-        android:hint="Name Bro!"
         android:id="@+id/regName"
         android:layout_width="259dp"
         android:layout_height="66dp"
@@ -41,12 +41,15 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/reg_edittext_style"
         android:ems="10"
+        android:hint="@string/what_is_your_name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/regMail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regUserPhoto" />
+        app:layout_constraintTop_toBottomOf="@+id/regUserPhoto"
+        app:layout_constraintVertical_bias="0.257" />
 
     <EditText
         android:id="@+id/regMail"
@@ -56,19 +59,17 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="80dp"
         android:background="@drawable/reg_edittext_style"
         android:ems="10"
-        android:hint="Mail Bana!"
+        android:hint="@string/email_addiction"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:background="@drawable/reg_edittext_style"
-        android:hint="Password"
         android:id="@+id/regPassword"
         android:layout_width="269dp"
         android:layout_height="68dp"
@@ -78,17 +79,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/reg_edittext_style"
         android:ems="10"
+        android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regMail"
-        app:layout_constraintVertical_bias="0.186" />
+        app:layout_constraintVertical_bias="0.118" />
 
     <EditText
-        android:background="@drawable/reg_edittext_style"
-        android:hint="Confirm Password"
         android:id="@+id/regPassword2"
         android:layout_width="259dp"
         android:layout_height="61dp"
@@ -98,13 +99,16 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/reg_edittext_style"
         android:ems="10"
+        android:hint="@string/confirm_password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.21" />
 
     <Button
         android:id="@+id/regBtn"
@@ -117,7 +121,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/reg_btn_style"
-        android:text="Register"
+        android:text="@string/register"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
