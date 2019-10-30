@@ -253,8 +253,8 @@ public class Home extends AppCompatActivity
                                             popupDescription.getText().toString(),
                                             imageDownlaodLink,
 
-//                                            currentUser.getPhotoUrl().toString());
-                                            currentUser.getUid() currentUser.getPhotoUrl() != null ? currentUser.getPhotoUrl().toString() : null, currentUser.getUid());
+                                            currentUser.getPhotoUrl().toString());
+//                                         currentUser.getUid() currentUser.getPhotoUrl() != null ? currentUser.getPhotoUrl().toString() : null, currentUser.getUid());
 
                                     // Add post to firebase
                                     addPost(post);
