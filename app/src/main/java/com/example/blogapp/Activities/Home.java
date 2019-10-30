@@ -252,56 +252,34 @@ public class Home extends AppCompatActivity
                                     Post post = new Post(popupTitle.getText().toString(),
                                             popupDescription.getText().toString(),
                                             imageDownlaodLink,
-                                            currentUser.getUid(),
-                                            currentUser.getPhotoUrl().toString());
 
-                                    // Add post to firebase database
+//                                            currentUser.getPhotoUrl().toString());
+                                            currentUser.getUid() currentUser.getPhotoUrl() != null ? currentUser.getPhotoUrl().toString() : null, currentUser.getUid());
 
+                                    // Add post to firebase
                                     addPost(post);
-
-
-
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    // something goes wrong uploading picture
-
+                                    // in case something goes wrong when uploading picture
                                     showMessage(e.getMessage());
                                     popupClickProgress.setVisibility(View.INVISIBLE);
                                     popupAddBtn.setVisibility(View.VISIBLE);
 
-
-
                                 }
                             });
 
-
                         }
                     });
-
-
-
-
-
-
-
-
                 }
                 else {
                     showMessage("Please verify all input fields and choose Post Image") ;
                     popupAddBtn.setVisibility(View.VISIBLE);
                     popupClickProgress.setVisibility(View.INVISIBLE);
-
                 }
-
-
-
             }
         });
-
-
-
     }
 
     private void addPost(Post post) {
@@ -309,13 +287,11 @@ public class Home extends AppCompatActivity
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Posts").push();
 
-        // get post unique ID and upadte post key
+        // get post unique ID and update post key
         String key = myRef.getKey();
         post.setPostKey(key);
 
-
         // add post data to firebase database
-
         myRef.setValue(post).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
