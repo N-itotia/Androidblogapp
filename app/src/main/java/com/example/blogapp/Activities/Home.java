@@ -252,12 +252,11 @@ public class Home extends AppCompatActivity
                                     Post post = new Post(popupTitle.getText().toString(),
                                             popupDescription.getText().toString(),
                                             imageDownlaodLink,
-
-//                                           currentUser.getPhotoUrl().toString());
                                             currentUser.getUid(),
-                                            currentUser.getPhotoUrl() != null ? currentUser.getPhotoUrl().toString() : null, currentUser.getUid();
+                                            currentUser.getPhotoUrl().toString());
+//                                          currentUser.getPhotoUrl() != null ? currentUser.getPhotoUrl().toString() : null, currentUser.getUid();
 
-                                    // Add post to firebase
+//                                     Add post to firebase
                                     addPost(post);
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
