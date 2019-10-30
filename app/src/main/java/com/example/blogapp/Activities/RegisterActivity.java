@@ -42,6 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText userEmail,userPassword,userPAssword2,userName;
     private ProgressBar loadingProgress;
     private Button regBtn;
+    private Button loginRegbtn;
 
     private FirebaseAuth mAuth;
 
@@ -58,6 +59,7 @@ public class RegisterActivity extends AppCompatActivity {
         userName = findViewById(R.id.regName);
         loadingProgress = findViewById(R.id.regProgressBar);
         regBtn = findViewById(R.id.regBtn);
+        loginRegbtn = findViewById(R.id.loginRegbtn);
         loadingProgress.setVisibility(View.INVISIBLE);
 
 
@@ -79,7 +81,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     //something goes wrong : all fields must be filled
                     //we need to display an error message
-                    showMessage("No no no. Please Verify all fields") ;
+                    showMessage("No no no  \uD83D\uDE05 Please Verify all fields") ;
                     regBtn.setVisibility(View.VISIBLE);
                     loadingProgress.setVisibility(View.INVISIBLE);
 
@@ -98,6 +100,15 @@ public class RegisterActivity extends AppCompatActivity {
 
             }
         });
+
+        loginRegbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openLoginPageIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                RegisterActivity.this.startActivity(openLoginPageIntent);
+            }
+        });
+
 
 
         ImgUserPhoto = findViewById(R.id.regUserPhoto) ;
@@ -136,23 +147,20 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful()){
 
                             //user account created successfully
-                            showMessage("Account created successfully, good stuff");
+                            showMessage("Successfully created account  \uD83D\uDE03  \uD83D\uDE01");
                             //after we created User account we need to update his profile picture and name
-
 
                             //now we check if the picked image is null or not
                             if(pickedImgUri != null) {
                                 updateUserInfo( name ,pickedImgUri,mAuth.getCurrentUser());
-
                             }else
                                 updateUserInfoWithoutPhoto(name,mAuth.getCurrentUser());
-
 
                         }
                         else {
 
                             //account creation failed
-                            showMessage("Account creation failed...Try again" + task.getException().getMessage());
+                            showMessage("Account creation failed \uD83E\uDD27 ...Try again" + task.getException().getMessage());
                             regBtn.setVisibility(View.VISIBLE);
                             loadingProgress.setVisibility(View.INVISIBLE);
 

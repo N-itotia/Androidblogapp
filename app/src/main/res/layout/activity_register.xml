@@ -7,6 +7,26 @@
     tools:context=".Activities.RegisterActivity"
     android:background="#ffffff">
 
+    <Button
+        android:id="@+id/loginRegbtn"
+        android:layout_width="178dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/reg_btn_style"
+        android:text="Log In"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPassword2"
+        app:layout_constraintVertical_bias="0.821" />
+
     <ImageView
         android:id="@+id/regUserPhoto"
         android:layout_width="90dp"
@@ -125,8 +145,10 @@
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/regPassword2"
+        app:layout_constraintVertical_bias="0.178" />
 
     <ProgressBar
         android:id="@+id/regProgressBar"
