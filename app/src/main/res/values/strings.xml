@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BlogApp</string>
+    <string name="app_name">Nairobi Story Blogging Service</string>
     <string name="title_activity_home">Home</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -17,10 +17,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello i dont know</string>
-    <string name="input_thy_electronics_mail">Input thy electronics-mail</string>
-    <string name="input_thy_secret_phrase">Input thy secret phrase</string>
+    <string name="input_thy_electronics_mail">Enter your Email here</string>
+    <string name="input_thy_secret_phrase">Enter your Password here</string>
     <string name="what_is_your_name">What is your name</string>
-    <string name="email_addiction">Email addiction</string>
+    <string name="email_addiction">Email Address</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="register">Register</string>
